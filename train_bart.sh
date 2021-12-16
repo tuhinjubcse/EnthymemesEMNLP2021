@@ -5,7 +5,7 @@ MAX_TOKENS=1024
 UPDATE_FREQ=16
 BART_PATH=bart.large/model.pt
 
-python3 train.py enthymemes-paracomet1\
+fairseq-train enthymemes-paracomet1\
     --restore-file $BART_PATH \
     --max-tokens $MAX_TOKENS \
     --task translation \
