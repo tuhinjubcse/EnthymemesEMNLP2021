@@ -5,7 +5,7 @@ MAX_TOKENS=1024
 UPDATE_FREQ=16
 BART_PATH=bart.large/model.pt
 
-python3 train.py enthymemes\
+python3 train.py enthymemes-paracomet1\
     --restore-file $BART_PATH \
     --max-tokens $MAX_TOKENS \
     --task translation \
@@ -24,7 +24,7 @@ python3 train.py enthymemes\
     --clip-norm 0.1 \
     --lr-scheduler polynomial_decay --lr $LR --total-num-update $TOTAL_NUM_UPDATES --warmup-updates $WARMUP_UPDATES \
     --memory-efficient-fp16 --update-freq $UPDATE_FREQ \
-    --save-dir "checkpoint-enthymemes" \
+    --save-dir "checkpoint-enthymemes-paracomet1" \
     --ddp-backend=no_c10d  \
     --skip-invalid-size-inputs-valid-test \
     --find-unused-parameters;
